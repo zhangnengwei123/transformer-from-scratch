@@ -9,7 +9,7 @@ block_size = 8
 # Batch Size（批大小）是指在一次训练迭代中，模型同时处理的样本数。
 batch_size = 4
 
-with open('ebook_free.text', 'r', encoding='UTF-8') as f:
+with open('../bigraml_model/ebook_free.text', 'r', encoding='UTF-8') as f:
     text = f.read()
 print(len(text))
 print(text[:200])  # 打印前200个字符

@@ -1,0 +1,1459 @@
+/Users/zhangnengwei/opt/anaconda3/envs/py310/bin/python /Users/zhangnengwei/nnnewworkspace/transformer-from-scratch/transformer/MyTransformerDemo.py
+字符字典:
+{'[CLS]': 0, '[PAD]': 1, '[SEP]': 2, '上': 3, '东': 4, '个': 5, '么': 6, '亚': 7, '今': 8, '们': 9, '你': 10, '傻': 11, '儿': 12, '先': 13, '冲': 14, '击': 15, '南': 16, '叮': 17, '可': 18, '呢': 19, '咋': 20, '响': 21, '在': 22, '天': 23, '头': 24, '将': 25, '小': 26, '就': 27, '带': 28, '开': 29, '当': 30, '心': 31, '我': 32, '打': 33, '搏': 34, '撤': 35, '是': 36, '爱': 37, '牛': 38, '由': 39, '真': 40, '能': 41, '自': 42, '菜': 43, '货': 44, '这': 45, '逼': 46, '铃': 47, '锋': 48, '鸡': 49}
+cpu
+tensor([2, 2, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+torch.Size([3, 12, 50])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+tensor(4.0805, grad_fn=<NllLossBackward0>)
+tensor([4, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 1/100, Loss: 4.071920394897461
+tensor([4, 2, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 2/100, Loss: 3.4258856773376465
+tensor([4, 3, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 3/100, Loss: 3.5140528678894043
+tensor([2, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 4/100, Loss: 2.999753475189209
+tensor([3, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 5/100, Loss: 3.0357487201690674
+tensor([0, 3, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 6/100, Loss: 3.175603151321411
+tensor([1, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 7/100, Loss: 2.629796266555786
+tensor([3, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 8/100, Loss: 2.1491916179656982
+tensor([2, 1, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 9/100, Loss: 2.589115619659424
+tensor([1, 0, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 10/100, Loss: 2.4889867305755615
+tensor([0, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 11/100, Loss: 1.7133817672729492
+tensor([2, 3, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 12/100, Loss: 1.9334253072738647
+tensor([1, 3, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 13/100, Loss: 1.8558871746063232
+tensor([0, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 14/100, Loss: 1.6776186227798462
+tensor([0, 0, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 15/100, Loss: 1.3531330823898315
+tensor([4, 3, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 16/100, Loss: 1.4383177757263184
+tensor([3, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 17/100, Loss: 1.5428898334503174
+tensor([4, 0, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 18/100, Loss: 0.929802417755127
+tensor([0, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 19/100, Loss: 0.9030044674873352
+tensor([0, 2, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 20/100, Loss: 1.1542304754257202
+tensor([0, 2, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 21/100, Loss: 0.9958285689353943
+tensor([3, 2, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 22/100, Loss: 1.0747730731964111
+tensor([0, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 23/100, Loss: 0.6194586753845215
+tensor([3, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 24/100, Loss: 0.8539711833000183
+tensor([1, 3, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 25/100, Loss: 0.7896219491958618
+tensor([4, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 26/100, Loss: 0.6768788695335388
+tensor([4, 1, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 27/100, Loss: 0.6719479560852051
+tensor([2, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 28/100, Loss: 0.5098918676376343
+tensor([3, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 29/100, Loss: 0.625400722026825
+tensor([2, 3, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 30/100, Loss: 0.5131535530090332
+tensor([0, 4, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 31/100, Loss: 0.3643054962158203
+tensor([3, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 32/100, Loss: 0.3714121878147125
+tensor([0, 3, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 33/100, Loss: 0.3568427562713623
+tensor([0, 1, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 34/100, Loss: 0.41047823429107666
+tensor([4, 0, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 35/100, Loss: 0.2792573869228363
+tensor([0, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 36/100, Loss: 0.3078823685646057
+tensor([0, 4, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 37/100, Loss: 0.24164938926696777
+tensor([0, 1, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 38/100, Loss: 0.2738410532474518
+tensor([0, 4, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 39/100, Loss: 0.24343442916870117
+tensor([3, 0, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 40/100, Loss: 0.23920229077339172
+tensor([3, 1, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 41/100, Loss: 0.23590087890625
+tensor([3, 4, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 42/100, Loss: 0.19384601712226868
+tensor([3, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 43/100, Loss: 0.2149503231048584
+tensor([4, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 44/100, Loss: 0.18842095136642456
+tensor([0, 3, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 45/100, Loss: 0.15942858159542084
+tensor([3, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 46/100, Loss: 0.15299540758132935
+tensor([0, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 47/100, Loss: 0.14539828896522522
+tensor([3, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 48/100, Loss: 0.1387142688035965
+tensor([4, 2, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 49/100, Loss: 0.12853875756263733
+tensor([0, 0, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 50/100, Loss: 0.12008114159107208
+tensor([1, 2, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 51/100, Loss: 0.12826672196388245
+tensor([0, 2, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 52/100, Loss: 0.1254589855670929
+tensor([4, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 53/100, Loss: 0.10897467285394669
+tensor([0, 3, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 54/100, Loss: 0.13008758425712585
+tensor([4, 2, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 55/100, Loss: 0.11329757422208786
+tensor([3, 3, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 56/100, Loss: 0.10986262559890747
+tensor([2, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 57/100, Loss: 0.11878551542758942
+tensor([0, 2, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 58/100, Loss: 0.09368801862001419
+tensor([0, 0, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 59/100, Loss: 0.06279537081718445
+tensor([3, 1, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 60/100, Loss: 0.09208880364894867
+tensor([0, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 61/100, Loss: 0.07966886460781097
+tensor([3, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 62/100, Loss: 0.0758993923664093
+tensor([1, 3, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 63/100, Loss: 0.0858645960688591
+tensor([3, 2, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 64/100, Loss: 0.07020474970340729
+tensor([1, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 65/100, Loss: 0.09182240068912506
+tensor([0, 4, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 66/100, Loss: 0.07536791265010834
+tensor([1, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 67/100, Loss: 0.08761531114578247
+tensor([4, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 68/100, Loss: 0.07595977932214737
+tensor([3, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 69/100, Loss: 0.08383040130138397
+tensor([2, 3, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 70/100, Loss: 0.053749870508909225
+tensor([4, 3, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 71/100, Loss: 0.06909278780221939
+tensor([3, 3, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 72/100, Loss: 0.048159968107938766
+tensor([0, 1, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 73/100, Loss: 0.07049865275621414
+tensor([4, 0, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 74/100, Loss: 0.06184360384941101
+tensor([2, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 75/100, Loss: 0.07485678791999817
+tensor([1, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 76/100, Loss: 0.0760703831911087
+tensor([0, 3, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 77/100, Loss: 0.042676813900470734
+tensor([0, 3, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 78/100, Loss: 0.046687591820955276
+tensor([4, 4, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 79/100, Loss: 0.06451895087957382
+tensor([2, 1, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 80/100, Loss: 0.06674300879240036
+tensor([1, 2, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 81/100, Loss: 0.05890124291181564
+tensor([1, 0, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 82/100, Loss: 0.05430082604289055
+tensor([3, 1, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 83/100, Loss: 0.05120350047945976
+tensor([4, 3, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 84/100, Loss: 0.05010423809289932
+tensor([2, 1, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 85/100, Loss: 0.04952354356646538
+tensor([3, 2, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 86/100, Loss: 0.04101164638996124
+tensor([0, 2, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 87/100, Loss: 0.03970260173082352
+tensor([4, 2, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 88/100, Loss: 0.05684687942266464
+tensor([1, 3, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 89/100, Loss: 0.04681072011590004
+tensor([0, 0, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 90/100, Loss: 0.03936820104718208
+tensor([3, 4, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 91/100, Loss: 0.042751800268888474
+tensor([0, 4, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 92/100, Loss: 0.044027674943208694
+tensor([4, 0, 1])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 93/100, Loss: 0.04257446527481079
+tensor([0, 1, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 94/100, Loss: 0.039368920028209686
+tensor([3, 1, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 95/100, Loss: 0.032259900122880936
+tensor([0, 1, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [10, 27, 36,  5, 43, 49,  2,  1,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 96/100, Loss: 0.045703526586294174
+tensor([2, 0, 2])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [32, 13, 35, 10,  9,  3,  2,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 97/100, Loss: 0.043647781014442444
+tensor([0, 4, 0])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 98/100, Loss: 0.03965447470545769
+tensor([3, 4, 4])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 99/100, Loss: 0.04437781125307083
+tensor([4, 0, 3])
+decoder_inputs_embedding:torch.Size([3, 11, 512])
+decoder_inputs_embedding:torch.Size([3, 12, 512])
+decoder_inputs_embedding:torch.Size([3, 11])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1]])
+decoder_inputs_embedding:torch.Size([3, 12])
+decoder_inputs_embedding:tensor([[ 8, 23, 40, 29, 31,  2,  1,  1,  1,  1,  1,  1],
+        [10, 40, 36,  5, 26, 18, 37,  2,  1,  1,  1,  1],
+        [45, 44, 40, 38, 46,  2,  1,  1,  1,  1,  1,  1]])
+torch.Size([36])
+torch.Size([36, 50])
+Epoch 100/100, Loss: 0.0397949256002903
+模型已保存到 my_first_transformer_model.pth
+模型和优化器已加载
+source_tokens:['[CLS]', '你', '真', '是', '个', '傻', '逼', '[SEP]', '[PAD]', '[PAD]', '[PAD]', '[PAD]']
+source_ids:torch.Size([1, 12])
+torch.Size([1, 1])
+decoder_inputs_embedding:torch.Size([1, 0, 512])
+decoder_inputs_embedding:torch.Size([1, 1, 512])
+next_token_id : 10
+tensor([[ 0, 10]])
+decoder_inputs_embedding:torch.Size([1, 1, 512])
+decoder_inputs_embedding:torch.Size([1, 2, 512])
+next_token_id : 40
+tensor([[ 0, 10, 40]])
+decoder_inputs_embedding:torch.Size([1, 2, 512])
+decoder_inputs_embedding:torch.Size([1, 3, 512])
+next_token_id : 36
+tensor([[ 0, 10, 40, 36]])
+decoder_inputs_embedding:torch.Size([1, 3, 512])
+decoder_inputs_embedding:torch.Size([1, 4, 512])
+next_token_id : 5
+tensor([[ 0, 10, 40, 36,  5]])
+decoder_inputs_embedding:torch.Size([1, 4, 512])
+decoder_inputs_embedding:torch.Size([1, 5, 512])
+next_token_id : 26
+tensor([[ 0, 10, 40, 36,  5, 26]])
+decoder_inputs_embedding:torch.Size([1, 5, 512])
+decoder_inputs_embedding:torch.Size([1, 6, 512])
+next_token_id : 18
+tensor([[ 0, 10, 40, 36,  5, 26, 18]])
+decoder_inputs_embedding:torch.Size([1, 6, 512])
+decoder_inputs_embedding:torch.Size([1, 7, 512])
+next_token_id : 37
+tensor([[ 0, 10, 40, 36,  5, 26, 18, 37]])
+decoder_inputs_embedding:torch.Size([1, 7, 512])
+decoder_inputs_embedding:torch.Size([1, 8, 512])
+next_token_id : 2
+tensor([[ 0, 10, 40, 36,  5, 26, 18, 37,  2]])
+翻译: ['你', '真', '是', '个', '小', '可', '爱', '[SEP]']
+
+Process finished with exit code 0

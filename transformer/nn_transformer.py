@@ -33,14 +33,15 @@ def create_pad_mask(t, pad):
     return mask
 
 
-def create_target_self_mask(target_len):
+def create_target_self_mask(target):
     r"""
     生成上三角的矩阵
 
     在Decoder中使用Mask, 在Decoder的自注意力对Decoder_inputs进行Mask,
-    :param target_len:
+    :param target:
     :return:[batch, target_len, target_len]
     """
+    target_len = target.shape[1]
     ones = torch.ones(target_len, target_len, dtype=torch.uint8)
     self_mask = torch.triu(ones, diagonal=1).unsqueeze(0)
     return self_mask
@@ -56,15 +57,17 @@ class MyTransformer(nn.Module):
                  t_vocabulary_size,
                  src_pad_idx,
                  tgt_pad_idx,
-                 d_model: int = 16,
+                 max_length: int = 12,
+                 d_model: int = 512,
                  num_heads=8,
                  num_encoder_layers: int = 6,
                  num_decoder_layers: int = 6,
-                 dim_feedforward: int = 64,
+                 dim_feedforward: int = 2048,
                  dropout: float = 0.1,
                  ) -> None:
         super().__init__()
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = device
         print(device)
 
         self.embedding_scale = d_model ** 0.5
@@ -72,10 +75,10 @@ class MyTransformer(nn.Module):
         self.src_pad_idx = src_pad_idx
         self.tgt_pad_idx = tgt_pad_idx
 
-        self.positional_embedding = PositionalEncoding(d_model, max_len=32, device=device)
+        self.positional_embedding = PositionalEncoding(d_model, max_len=max_length, device=device)
 
-        self.i_vocabulary_embedding = nn.Embedding(i_vocabulary_size, d_model)
-        self.t_vocabulary_embedding = nn.Embedding(t_vocabulary_size, d_model)
+        self.i_vocabulary_embedding = nn.Embedding(i_vocabulary_size, d_model, device=device)
+        self.t_vocabulary_embedding = nn.Embedding(t_vocabulary_size, d_model, device=device)
 
         self.encoder = TransformerEncoder(
             d_model=d_model, dim_feedforward=dim_feedforward,
@@ -96,8 +99,10 @@ class MyTransformer(nn.Module):
         # 1 获取输入embedding
         # [batch_size, seq_len] ---> [batch_size, seq_len, d_model]
         encoder_inputs_embedding = self.i_vocabulary_embedding(encoder_inputs)
+
         # 先处理一次空白字符
         encoder_inputs_embedding.masked_fill_(encoder_mask.squeeze(1).unsqueeze(-1), 0)
+
         # 对输入的embedding进行缩放（scaling）
         # 对Transformer输入的embedding进行缩放是为了确保数值稳定性，与位置编码匹配，并缓解梯度消失或爆炸问题。
         # 这一步对于Transformer模型的有效训练和性能提升非常重要。
@@ -109,6 +114,7 @@ class MyTransformer(nn.Module):
         # 4 +
         encoder_x = encoder_inputs_embedding + encoder_inputs_positional_embedding
         # 5
+        # [batch_size, seq_len, d_model]
         encoder_x = self.dropout(encoder_x)
 
         # ------------------------------decode-------------------------------
@@ -117,8 +123,10 @@ class MyTransformer(nn.Module):
 
         # 生成掩码矩阵
         decoder_mask = create_pad_mask(decoder_inputs, self.tgt_pad_idx)
-        decoder_self_mask = create_target_self_mask(decoder_inputs.shape[1])
-        encoder_decoder_mask = create_pad_mask(encoder_outputs, self.src_pad_idx)
+        decoder_self_mask = create_target_self_mask(decoder_inputs).to(torch.bool).to(device=self.device)
+
+        encoder_decoder_mask = encoder_mask
+
         # 1 获取输入embedding
         # [batch_size, seq_len] ---> [batch_size, seq_len, d_model]
         decoder_inputs_embedding = self.i_vocabulary_embedding(decoder_inputs)
@@ -126,7 +134,10 @@ class MyTransformer(nn.Module):
 
         # 2 Shifted right
         decoder_inputs_embedding = decoder_inputs_embedding[:, :-1]
+        print(f"decoder_inputs_embedding:{decoder_inputs_embedding.shape}")
         decoder_inputs_embedding = F.pad(decoder_inputs_embedding, (0, 0, 1, 0))
+
+        print(f"decoder_inputs_embedding:{decoder_inputs_embedding.shape}")
         # 3 缩放
         decoder_inputs_embedding *= self.embedding_scale
         # 4 加入positional embedding
@@ -209,12 +220,13 @@ class TransformerEncoderLayer(nn.Module):
                  num_heads: int = 8
                  ):
         super().__init__()
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.self_attention = MultiHeadAttention(d_model=d_model, num_heads=num_heads)
-        self.self_attention_norm = nn.LayerNorm(d_model, eps=1e-6)
+        self.self_attention_norm = nn.LayerNorm(d_model, eps=1e-6, device=device)
         self.self_attention_dropout = nn.Dropout(dropout)
 
         self.ffn = FeedForwardNetwork(d_model, dim_feedforward, dropout)
-        self.ffn_norm = nn.LayerNorm(d_model, eps=1e-6)
+        self.ffn_norm = nn.LayerNorm(d_model, eps=1e-6, device=device)
         self.ffn_dropout = nn.Dropout(dropout)
 
     def forward(self,
@@ -249,16 +261,18 @@ class TransformerDecoderLayer(nn.Module):
                  ):
         super().__init__()
 
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
         self.self_attention = MultiHeadAttention(d_model=d_model, num_heads=num_heads)
-        self.self_attention_norm = nn.LayerNorm(d_model, eps=1e-6)
+        self.self_attention_norm = nn.LayerNorm(d_model, eps=1e-6, device=device)
         self.self_attention_dropout = nn.Dropout(dropout)
 
         self.encoder_decoder_self_attention = MultiHeadAttention(d_model=d_model)
-        self.encoder_decoder_self_attention_norm = nn.LayerNorm(d_model, eps=1e-6)
+        self.encoder_decoder_self_attention_norm = nn.LayerNorm(d_model, eps=1e-6, device=device)
         self.encoder_decoder_self_attention_dropout = nn.Dropout(dropout)
 
         self.ffn = FeedForwardNetwork(d_model, dim_feedforward, dropout)
-        self.ffn_norm = nn.LayerNorm(d_model, eps=1e-6)
+        self.ffn_norm = nn.LayerNorm(d_model, eps=1e-6, device=device)
         self.ffn_dropout = nn.Dropout(dropout)
 
     def forward(self,
@@ -302,19 +316,21 @@ class MultiHeadAttention(nn.Module):
                  ):
         super().__init__()
 
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
         self.num_heads = num_heads
 
         self.dim_each_head = d_model // num_heads
+        self.d_q = self.d_k = self.d_v = self.dim_each_head
 
-        self.w_q = nn.Linear(in_features=d_model, out_features=d_model, bias=False)
-        self.w_k = nn.Linear(in_features=d_model, out_features=d_model, bias=False)
-        self.w_v = nn.Linear(in_features=d_model, out_features=d_model, bias=False)
-        self.w_o = nn.Linear(in_features=d_model, out_features=d_model, bias=False)
+        self.w_q = nn.Linear(in_features=d_model, out_features=d_model, bias=False, device=device)
+        self.w_k = nn.Linear(in_features=d_model, out_features=d_model, bias=False, device=device)
+        self.w_v = nn.Linear(in_features=d_model, out_features=d_model, bias=False, device=device)
+        self.w_o = nn.Linear(in_features=d_model, out_features=d_model, bias=False, device=device)
 
         self.dropout = nn.Dropout(dropout)
 
-    @staticmethod
-    def scaled_dot_product_attention(q, k, v, attention_mask):
+    def scaled_dot_product_attention(self, q, k, v, attention_mask):
         r"""
         Attention(Q,K,V) = softmax((Q @ K^T)/sqrt(d_k)) @ V
         :param q:
@@ -323,13 +339,12 @@ class MultiHeadAttention(nn.Module):
         :param attention_mask:
         :return:
         """
-        d_k = q.shape[-1]
         # q (batch_size, num_heads, seq_len, d_q)
         # k (batch_size, num_heads, seq_len, d_k)
         # k.transpose(-1, -2) (batch_size, num_heads, seq_len, d_k)  ---> (batch_size, num_heads, d_k, seq_len)
         # torch.matmul(q, k.transpose(-1, -2)) 矩阵相乘 ---> (batch_size, num_heads, seq_len, seq_len)
 
-        scores = torch.matmul(q, k.transpose(-1, -2)) / math.sqrt(d_k)  # (batch_size, num_heads, seq_len, seq_len)
+        scores = torch.matmul(q, k.transpose(-1, -2)) / math.sqrt(self.d_k)  # (batch_size, num_heads, seq_len, seq_len)
         scores.masked_fill_(attention_mask, -1e9)
 
         attention = nn.Softmax(dim=-1)(scores)  # (batch_size, num_heads, seq_len, seq_len)
@@ -360,26 +375,17 @@ class MultiHeadAttention(nn.Module):
 
         batch_size = q.shape[0]
         seq_len = q.shape[1]
-        query = self.w_q(q)  # (batch_size, seq_len, d_model) --> (batch_size, seq_len, d_model)
-        key = self.w_k(k)  # (batch_size, seq_len, d_model) --> (batch_size, seq_len, d_model)
-        value = self.w_v(v)  # (batch_size, seq_len, d_model) --> (batch_size, seq_len, d_model)
+        # 第一步经过线性层 (batch_size, seq_len, d_model) --> (batch_size, seq_len, d_model)
+        # 第二步经过view (batch_size, seq_len, d_model) --- >  (batch_size, seq_len, num_heads, d_k)
+        # 第三步经过转置transpose (batch_size, seq_len, num_heads, d_q) --> (batch_size, num_heads, seq_len, d_q)
+        query = self.w_q(q).view(batch_size, seq_len, self.num_heads, d_q).transpose(1, 2)
+        key = self.w_k(k).view(batch_size, -1, self.num_heads, d_k).transpose(1, 2)
+        value = self.w_v(v).view(batch_size, -1, self.num_heads, d_v).transpose(1, 2)
 
-        # (batch_size, seq_len, d_model) --- >  (batch_size, seq_len, num_heads, d_k)
-        query.view(batch_size, seq_len, self.num_heads, d_q)
-        # (batch_size, seq_len, d_model) --- >  (batch_size, seq_len, num_heads, d_k)
-        key.view(batch_size, seq_len, self.num_heads, d_k)
-        # (batch_size, seq_len, d_model) --- >  (batch_size, seq_len, num_heads, d_v)
-        value.view(batch_size, seq_len, self.num_heads, d_v)
-
-        # (batch_size, seq_len, num_heads, d_q) --> (batch_size, num_heads, seq_len, d_q)
-        query = query.transpose(1, 2)
-        # (batch_size, seq_len, num_heads, d_k) --> (batch_size, num_heads, seq_len, d_k)
-        key = key.transpose(1, 2)
-        # (batch_size, seq_len, num_heads, d_v) --> (batch_size, num_heads, seq_len, d_v)
-        value = value.transpose(1, 2)
+        mask = mask.unsqueeze(1).repeat(1, self.num_heads, 1, 1)
 
         # Calculate attention
-        x, attention = MultiHeadAttention.scaled_dot_product_attention(query, key, value, mask)
+        x, attention = self.scaled_dot_product_attention(query, key, value, mask)
 
         # Combine all the heads together
         # (batch_size, num_heads, seq_len, d_k) --> (batch_size, seq_len, num_heads, d_k)
@@ -389,7 +395,6 @@ class MultiHeadAttention(nn.Module):
 
         # Multiply by Wo
         # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
-
         x = self.w_o(x)
         return x
 
@@ -397,10 +402,11 @@ class MultiHeadAttention(nn.Module):
 class FeedForwardNetwork(nn.Module):
     def __init__(self, d_model: int, dim_feedforward: int, dropout: float):
         super().__init__()
-        self.layer1 = nn.Linear(d_model, dim_feedforward)
-        self.relu = nn.ReLU
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.layer1 = nn.Linear(d_model, dim_feedforward, device=device)
+        self.relu = nn.ReLU()
         self.dropout = nn.Dropout(dropout)
-        self.layer2 = nn.Linear(d_model, dim_feedforward)
+        self.layer2 = nn.Linear(dim_feedforward, d_model, device=device)
 
         initialize_weight(self.layer1)
         initialize_weight(self.layer2)

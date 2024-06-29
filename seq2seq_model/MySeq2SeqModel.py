@@ -132,8 +132,13 @@ for epoch in range(epochs):
     # 从而使得一些需要连续内存布局的操作（如 view）能够顺利进行。
     # 了解和正确使用 contiguous() 是处理复杂张量操作时的一项重要技能。
     # .view(-1)是一种常用的方法，用于将张量展平（flatten）成一个一维张量。
+    print(target_ids_tensor.shape)
     target_ids_shifted = target_ids_tensor[:, 1:].contiguous().view(-1)
+    print(target_ids_shifted.shape)
+    # [1,12]
     logits = logits.contiguous().view(-1, tokenizer_cn.vocab_size)
+    # [11,vocab_size]
+    print(logits.shape)
 
     # 计算损失
     loss = criterion(logits, target_ids_shifted)
@@ -143,8 +148,8 @@ for epoch in range(epochs):
     optimizer.step()
 
     print(f"Epoch {epoch + 1}/{epochs}, Loss: {loss.item()}")
-
-# 保存模型和优化器状态字典
+#
+# # 保存模型和优化器状态字典
 save_path = "seq2seq_model.pth"
 torch.save({
     'model_state_dict': model.state_dict(),
@@ -166,8 +171,8 @@ loaded_optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 print("模型和优化器已加载")
 
 # 使用模型推理
-
-# 设置模型为评估模式
+#
+# # 设置模型为评估模式
 loaded_model.eval()
 
 def translate(model, source_sentence, max_target_length=12):
@@ -222,6 +227,6 @@ def translate(model, source_sentence, max_target_length=12):
 
 
 # 测试
-source_sentence = "她真是个傻逼"
+source_sentence = "你真是个傻逼"
 translation = translate(loaded_model, source_sentence)
 print(f"翻译: {translation}")
